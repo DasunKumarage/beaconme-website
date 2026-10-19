@@ -1,0 +1,21 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.directory
+
+# IDE / Editor Folders
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs and Temporary Files
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Archive / Backup directories
+backup/
+*.zip
