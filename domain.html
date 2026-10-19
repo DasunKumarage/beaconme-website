@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain & Literature | BeaconMe — R26-IT-137</title>
+    <meta name="description" content="Research domain, literature survey, research gap, objectives, and methodology for the BeaconMe emergency communication system.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>">
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to content</a>
+
+    <header class="menu-bar">
+        <div class="menu-left">
+            <a href="index.html" class="wordmark">BEACONME<span class="dot">.</span></a>
+            <div class="breadcrumbs">
+                <span>R26-IT-137</span>
+                <span style="opacity:0.4">/</span>
+                <span class="text-mint">Domain</span>
+            </div>
+        </div>
+        <div class="menu-right">
+            <div class="clock" id="nav-clock"></div>
+            <a href="contact.html" class="pill-button outline">Contact</a>
+        </div>
+    </header>
+
+    <main class="domain-layout container section-pad" id="main-content" style="padding-top: calc(var(--top-bar) + 40px);">
+        <aside class="sidebar">
+            <nav>
+                <div class="label" style="padding:8px 16px;">Sections</div>
+                <a href="#literature" class="spy-link active">Literature Survey</a>
+                <a href="#gap" class="spy-link">Research Gap</a>
+                <a href="#problem" class="spy-link">Research Problem</a>
+                <a href="#objectives" class="spy-link">Objectives</a>
+                <a href="#methodology" class="spy-link">Methodology</a>
+                <a href="#technologies" class="spy-link">Technologies Used</a>
+            </nav>
+        </aside>
+
+        <div style="flex-grow: 1;">
+            <section id="literature" class="content-section" data-rev="0">
+                <h2>Literature Survey</h2>
+                <p style="margin-top:16px;">Existing research shows that standard communication infrastructure fails almost immediately during natural disasters. A 2017 study demonstrated the potential of LoRa for long-range, low-power communication, but primarily for automated sensor networks rather than human-initiated SOS signals. Other studies focus on deployable WiFi or satellite units, which are often too localized, expensive, or require internet backbones that are unavailable during catastrophic events.</p>
+            </section>
+
+            <section id="gap" class="content-section" data-rev="0">
+                <h2>Research Gap</h2>
+                <p style="margin-top:16px;margin-bottom:24px;">Current solutions either require an active mobile network or are purely automated sensors without a way for civilians to report their specific emergencies.</p>
+                
+                <div style="background:var(--ground-3); border:1px solid var(--hairline); padding:24px; border-radius:var(--radius-lg); margin-bottom: 24px;">
+                    <h4 style="color:var(--muted);margin-bottom:16px;">Existing Systems</h4>
+                    <ul style="color:var(--ink-2);margin-left:20px;margin-bottom:24px;">
+                        <li>Require working smartphones</li>
+                        <li>No priority sorting for SOS</li>
+                        <li>Messages too large for efficient radio</li>
+                        <li>Cannot filter out false alarms</li>
+                    </ul>
+                    <h4 style="color:var(--accent-teal);margin-bottom:16px;">Our Solution</h4>
+                    <ul style="color:var(--ink);margin-left:20px;">
+                        <li>Works with or without phones (Physical SOS button)</li>
+                        <li>Three-tier priority classification (Critical, Emergency, Info)</li>
+                        <li>Custom 19-byte data compression protocol</li>
+                        <li>AI-driven genuine/false classification using sensor correlation</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="problem" class="content-section" data-rev="0">
+                <h2>Research Problem</h2>
+                <p style="margin-top:16px;">How can we build a simple, affordable, portable device that allows disaster survivors to send their location and emergency details to rescue authorities — even when all phone networks, internet, and electricity are completely down — and that filters genuine signals from noise to optimize rescue operations?</p>
+            </section>
+
+            <section id="objectives" class="content-section" data-rev="0">
+                <h2>Research Objectives</h2>
+                <div style="margin-top:24px;background:var(--ground-3);border:1px solid var(--hairline);border-radius:var(--radius-lg);padding:clamp(20px,3vw,32px);">
+                    <h3 style="margin-bottom:16px;color:var(--accent-amber);">Main Objective</h3>
+                    <p style="margin-bottom:24px;">Implement a backup communicating network to be used when the main communication system is not available in a disaster situation, to save as much lives as possible.</p>
+                    <h4 style="margin-bottom:16px;color:var(--ink);">Sub-objectives</h4>
+                    <ul style="color:var(--ink-2);margin-left:20px;display:grid;gap:12px;">
+                        <li>Create the communication network and relevant devices (Relay stations).</li>
+                        <li>Implement the ability to send distress signals and current location using the portable RF transmitter.</li>
+                        <li>Design and implement the data filtering AI model to identify genuine emergency signals and prioritize them.</li>
+                        <li>Measure flood levels and inform it within the system to provide early warnings and correlate with SOS signals.</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="methodology" class="content-section" data-rev="0">
+                <h2>Methodology</h2>
+                <p style="margin-top:16px;">Our project follows a Design Science Research (DSR) approach, organized into a multi-layer pipeline.</p>
+                
+                <figure class="image-captioned">
+                    <img src="assets/images/IT22193636pic1_SurvivorNode.webp" alt="Survivor Node" loading="lazy" width="1200" height="800">
+                    <figcaption>Figure 1: Signal Acquisition - The Portable Survivor Node sending distress signals over LoRa.</figcaption>
+                </figure>
+                
+                <figure class="image-captioned">
+                    <img src="assets/images/IT22149480pic1_ServerNode.webp" alt="Server Node" loading="lazy" width="1200" height="800">
+                    <figcaption>Figure 2: The Server Node receiving mesh data and interfacing with the AI backend.</figcaption>
+                </figure>
+                
+                <figure class="image-captioned">
+                    <img src="assets/images/IT22149480pic2_ADHocUnit.webp" alt="Ad-Hoc Unit" loading="lazy" width="1200" height="800">
+                    <figcaption>Figure 3: Ad-Hoc Relay Unit extending the mesh network coverage.</figcaption>
+                </figure>
+                
+                <figure class="image-captioned">
+                    <img src="assets/images/IT22138972pic1_SensorNode.webp" alt="Sensor Node" loading="lazy" width="1200" height="800">
+                    <figcaption>Figure 4: Sensor Node providing live telemetry and flood monitoring.</figcaption>
+                </figure>
+
+                <figure class="image-captioned">
+                    <img src="assets/images/IT22138972pic2_AIFilteringDashbord.webp" alt="AI Dashboard" loading="lazy" width="1200" height="800">
+                    <figcaption>Figure 5: The AI Dashboard filtering genuine emergencies and visualizing them for rescue ops.</figcaption>
+                </figure>
+            </section>
+
+            <section id="technologies" class="content-section" data-rev="0">
+                <h2>Technologies Used</h2>
+                <p style="margin-top:16px;color:var(--ink-2);margin-bottom:24px;">BeaconMe leverages a lightweight, off-grid technology stack spanning long-range radio hardware, embedded microcontrollers, satellite positioning, machine learning validation, and cross-platform software.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                    <div style="background:var(--ground-3); border:1px solid var(--hairline); padding:20px; border-radius:var(--radius-md);">
+                        <h3 style="font-size:16px; margin-bottom:8px;">LoRa RF & ESP32</h3>
+                        <p style="font-size:14px;">Long-range 868/915 MHz radio communication with ESP32 SoC for mesh logic and Wi-Fi SoftAP.</p>
+                    </div>
+                    <div style="background:var(--ground-3); border:1px solid var(--hairline); padding:20px; border-radius:var(--radius-md);">
+                        <h3 style="font-size:16px; margin-bottom:8px;">XGBoost ML</h3>
+                        <p style="font-size:14px;">Machine learning classifier to filter out noise, test pings, and false alarms based on sensor correlations.</p>
+                    </div>
+                    <div style="background:var(--ground-3); border:1px solid var(--hairline); padding:20px; border-radius:var(--radius-md);">
+                        <h3 style="font-size:16px; margin-bottom:8px;">Flutter</h3>
+                        <p style="font-size:14px;">Cross-platform civilian emergency app featuring minimal-tap operation and offline positioning.</p>
+                    </div>
+                    <div style="background:var(--ground-3); border:1px solid var(--hairline); padding:20px; border-radius:var(--radius-md);">
+                        <h3 style="font-size:16px; margin-bottom:8px;">Sensors & GPS</h3>
+                        <p style="font-size:14px;">u-blox NEO-6M for direct coordinates and ultrasonic sensors for live flood telemetry.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer class="footer-mini">
+        <span>© 2026 BeaconMe Project — R26-IT-137.</span>
+        <span>Supervised by Mr. Dhammika De Silva & Ms. Anjalie Gamage</span>
+    </footer>
+
+    <!-- Bottom Dock Navigation -->
+    <div class="dock-container">
+        <div class="dock" role="toolbar" aria-label="Site navigation">
+            <a href="index.html" class="dock-item" aria-label="Home">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                <div class="dock-tooltip">Home</div>
+            </a>
+            <a href="domain.html" class="dock-item active" aria-label="Domain">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                <div class="dock-tooltip">Domain</div>
+            </a>
+            <a href="milestones.html" class="dock-item" aria-label="Milestones">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                <div class="dock-tooltip">Milestones</div>
+            </a>
+            <a href="documents.html" class="dock-item" aria-label="Documents">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div class="dock-tooltip">Documents</div>
+            </a>
+            <a href="slides.html" class="dock-item" aria-label="Slides">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                <div class="dock-tooltip">Slides</div>
+            </a>
+            <a href="about.html" class="dock-item" aria-label="About Us">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div class="dock-tooltip">About Us</div>
+            </a>
+            <a href="contact.html" class="dock-item" aria-label="Contact">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                <div class="dock-tooltip">Contact</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        // Scroll Spy
+        const sections = document.querySelectorAll('.content-section');
+        const links = document.querySelectorAll('.spy-link');
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(s => { if (scrollY >= s.offsetTop - 150) current = s.id; });
+            links.forEach(l => {
+                l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+            });
+        });
+    </script>
+</body>
+</html>
