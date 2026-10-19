@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | BeaconMe — R26-IT-137</title>
+    <meta name="description" content="Get in touch with the BeaconMe research team.">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📡</text></svg>">
+    <style>
+        .contact-layout {
+            padding: 120px 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 48px;
+        }
+
+        @media (min-width: 768px) {
+            .contact-layout { grid-template-columns: minmax(320px, 360px) 1fr; }
+        }
+
+        .contact-info { display: flex; flex-direction: column; gap: 32px; min-width: 0; }
+
+        .info-block {
+            background: var(--ground-3);
+            padding: 22px 24px;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--hairline);
+            transition: all 0.25s var(--ease-out);
+            overflow: hidden;
+            display: block;
+            text-decoration: none;
+            color: inherit;
+        }
+        .info-block:hover {
+            border-color: rgba(125, 249, 192, 0.35);
+            transform: translateY(-2px);
+            background: rgba(16, 19, 25, 0.95);
+        }
+
+        .info-block svg { width: 24px; height: 24px; color: var(--accent-amber); margin-bottom: 14px; }
+
+        .info-value {
+            font-family: var(--font-display);
+            font-size: clamp(14px, 1.4vw, 16px);
+            font-weight: 600;
+            color: var(--ink);
+            line-height: 1.4;
+            word-break: break-all;
+            overflow-wrap: anywhere;
+            transition: color 0.2s;
+        }
+        .info-block:hover .info-value {
+            color: var(--accent-mint);
+        }
+
+        /* Mail Compose Window */
+        .compose-window {
+            background: rgba(8,9,12,0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--hairline);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 400px;
+        }
+
+        .compose-header {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--hairline);
+            background: var(--ground-2);
+            display: flex;
+            align-items: center;
+            justify-content: center; /* Center the text properly */
+            position: relative;
+        }
+
+        .compose-header .title {
+            font-size:14px; font-weight:600; color:var(--ink);
+        }
+
+        .compose-field {
+            display: flex;
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--hairline);
+            font-size: 14px;
+        }
+
+        .compose-label { color: var(--ink-3); width: 80px; }
+        .compose-value { color: var(--ink); flex: 1; }
+
+        .compose-body {
+            padding: 16px;
+            flex: 1;
+            font-family: var(--font-body);
+            font-size: 14px;
+            color: var(--ink-2);
+            white-space: pre-wrap;
+            line-height: 1.6;
+            background: transparent;
+            border: none;
+            resize: none;
+            outline: none;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .compose-footer {
+            padding: 16px;
+            display: flex;
+            justify-content: flex-end;
+            gap: 16px;
+            border-top: 1px solid var(--hairline);
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="sr-only">Skip to content</a>
+
+    <header class="menu-bar">
+        <div class="menu-left">
+            <a href="index.html" class="wordmark">BEACONME<span class="dot">.</span></a>
+            <div class="breadcrumbs"><span>R26-IT-137</span><span style="opacity:0.4">/</span><span class="text-mint">Contact</span></div>
+        </div>
+        <div class="menu-right">
+            <div class="clock" id="nav-clock"></div>
+            <a href="contact.html" class="pill-button" style="opacity:0.5; pointer-events:none;">Contact</a>
+        </div>
+    </header>
+
+    <main class="contact-layout" id="main-content" style="padding-top:calc(var(--top-bar) + 60px);">
+        <div class="contact-info">
+            <div data-rev="0">
+                <h1 style="font-size:32px; margin-bottom:8px;">Get in touch.</h1>
+                <p>Reach out for technical details or inquiries regarding the BeaconMe communication system.</p>
+            </div>
+
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=project.group.6996@gmail.com" target="_blank" rel="noopener noreferrer" class="info-block" data-rev="60" title="Send email to project.group.6996@gmail.com">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                <div class="label" style="margin-bottom:8px;">General Inquiry</div>
+                <div class="info-value">project.group.6996@gmail.com</div>
+            </a>
+
+            <div class="info-block" data-rev="120" style="cursor:default;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                <div class="label" style="margin-bottom:8px;">Institution</div>
+                <div class="info-value">Faculty of Computing<br><span style="font-size:14px; font-weight:400; color:var(--ink-3); margin-top:4px; display:block;">SLIIT Malabe Campus, Sri Lanka</span></div>
+            </div>
+        </div>
+
+        <div class="compose-window" data-rev="180">
+            <div class="compose-header">
+                <div class="title">New Message</div>
+            </div>
+            <div class="compose-field">
+                <span class="compose-label">To:</span>
+                <select id="compose-recipient" class="compose-value" style="font-weight:600; color:var(--ink); background:transparent; border:none; outline:none; font-family:inherit; font-size:inherit; width:100%; cursor:pointer;">
+                    <option value="project.group.6996@gmail.com" style="background:var(--ground-2); color:var(--ink);">BeaconMe Team (project.group.6996@gmail.com)</option>
+                    <option value="dhammika.d@sliit.lk" style="background:var(--ground-2); color:var(--ink);">Mr. Dhammika De Silva - Supervisor (dhammika.d@sliit.lk)</option>
+                    <option value="anjalie.g@curtincolombo.lk" style="background:var(--ground-2); color:var(--ink);">Ms. Anjalie Gamage - Co-Supervisor (anjalie.g@curtincolombo.lk)</option>
+                    <option value="visalkumara66@gmail.com" style="background:var(--ground-2); color:var(--ink);">G.R.Visal Harshana Kumara (visalkumara66@gmail.com)</option>
+                    <option value="kulminsanjula@gmail.com" style="background:var(--ground-2); color:var(--ink);">Satharasinghe K S (kulminsanjula@gmail.com)</option>
+                    <option value="ddkumarage@gmail.com" style="background:var(--ground-2); color:var(--ink);">Kumarage D D (ddkumarage@gmail.com)</option>
+                </select>
+            </div>
+            <div class="compose-field">
+                <span class="compose-label">Subject:</span>
+                <input type="text" id="compose-sub" value="Inquiry: R26-IT-137 Project" class="compose-value" style="font-weight:600; color:var(--ink); background:transparent; border:none; outline:none; font-family:inherit; font-size:inherit; width:100%;">
+            </div>
+            <textarea class="compose-body" id="compose-msg" placeholder="Type your message here..."></textarea>
+            <div class="compose-footer">
+                <a href="#" target="_blank" rel="noopener noreferrer" class="pill-button teal" id="send-gmail-btn" style="text-decoration:none;">Send via Gmail</a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer-mini">
+        <span>© 2026 BeaconMe Project — R26-IT-137.</span>
+        <span>Supervised by Mr. Dhammika De Silva &amp; Ms. Anjalie Gamage</span>
+    </footer>
+
+    <!-- Bottom Dock Navigation -->
+    <div class="dock-container">
+        <div class="dock" role="toolbar" aria-label="Site navigation">
+            <a href="index.html" class="dock-item" aria-label="Home">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+                <div class="dock-tooltip">Home</div>
+            </a>
+            <a href="domain.html" class="dock-item" aria-label="Domain">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                <div class="dock-tooltip">Domain</div>
+            </a>
+            <a href="milestones.html" class="dock-item" aria-label="Milestones">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+                <div class="dock-tooltip">Milestones</div>
+            </a>
+            <a href="documents.html" class="dock-item" aria-label="Documents">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <div class="dock-tooltip">Documents</div>
+            </a>
+            <a href="slides.html" class="dock-item" aria-label="Slides">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                <div class="dock-tooltip">Slides</div>
+            </a>
+            <a href="about.html" class="dock-item" aria-label="About Us">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                <div class="dock-tooltip">About Us</div>
+            </a>
+            <a href="contact.html" class="dock-item active" aria-label="Contact">
+                <div class="dock-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+                <div class="dock-tooltip">Contact</div>
+            </a>
+        </div>
+    </div>
+
+    <script src="assets/js/main.js"></script>
+    <script>
+        const msgField = document.getElementById('compose-msg');
+        const subField = document.getElementById('compose-sub');
+        const recipientField = document.getElementById('compose-recipient');
+        const sendGmailBtn = document.getElementById('send-gmail-btn');
+        
+        const templateText = `Hello BeaconMe Team,\n\nI am writing to inquire about the Island Wide Communication System (R26-IT-137).\n\nCould you please provide more information regarding the project architecture and availability?\n\nThank you,\n[Your Name]`;
+        
+        msgField.value = templateText;
+
+        function updateMailLinks() {
+            const recipient = encodeURIComponent(recipientField.value);
+            const subject = encodeURIComponent(subField.value);
+            const body = encodeURIComponent(msgField.value);
+
+            // Method 1: Gmail Web Compose URL (opens directly in browser tab)
+            sendGmailBtn.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${recipient}&su=${subject}&body=${body}`;
+        }
+
+        recipientField.addEventListener('change', updateMailLinks);
+        msgField.addEventListener('input', updateMailLinks);
+        subField.addEventListener('input', updateMailLinks);
+        updateMailLinks();
+    </script>
+</body>
+</html>
